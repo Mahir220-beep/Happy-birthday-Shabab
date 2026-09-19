@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday, Shabab! ❤️</title>
+    <!-- Elegant Calligraphy Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -12,8 +14,7 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
-            /* Rich floral rose background with repeating soft pattern */
+            font-family: 'Playfair Display', Georgia, serif;
             background: #2d0b1e url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200') center/cover no-repeat fixed;
             min-height: 100vh;
             display: flex;
@@ -25,7 +26,6 @@
             position: relative;
         }
 
-        /* Dark overlay to make elements pop against the rose background */
         body::before {
             content: '';
             position: absolute;
@@ -34,7 +34,7 @@
             z-index: 1;
         }
 
-        /* Animated Floating Rose Petals & Flowers */
+        /* Animated Floating Rose Petals */
         .petal {
             position: absolute;
             font-size: 24px;
@@ -48,7 +48,6 @@
             100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
         }
 
-        /* Outer Container */
         .wrapper {
             position: relative;
             z-index: 3;
@@ -57,7 +56,7 @@
             text-align: center;
         }
 
-        /* STEP 1: INITIAL CARD (TAPPABLE ENVELOPE) */
+        /* ENVELOPE CARD */
         .envelope-card {
             background: rgba(255, 255, 255, 0.95);
             padding: 40px 25px;
@@ -76,7 +75,7 @@
 
         .rose-icon {
             font-size: 4.5rem;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             animation: pulse 1.8s infinite ease-in-out;
         }
 
@@ -86,15 +85,19 @@
             100% { transform: scale(1); }
         }
 
-        .envelope-title {
+        /* ELEGANT HEADING STYLE */
+        .elegant-title {
+            font-family: 'Great Vibes', cursive;
             color: #d63031;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            font-family: 'Segoe UI', sans-serif;
+            font-size: 3.5rem;
+            font-weight: normal;
+            line-height: 1.2;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
         .envelope-subtitle {
-            color: #888;
+            color: #777;
             font-size: 1.05rem;
             margin-bottom: 25px;
             font-style: italic;
@@ -111,9 +114,9 @@
             box-shadow: 0 5px 15px rgba(214, 48, 49, 0.4);
         }
 
-        /* STEP 2: REVEALED LETTER (HIDDEN BY DEFAULT) */
+        /* REVEALED LETTER */
         .letter-card {
-            display: none; /* Hidden until envelope is tapped */
+            display: none;
             background: rgba(255, 255, 255, 0.96);
             padding: 35px 25px;
             border-radius: 25px;
@@ -129,15 +132,8 @@
         }
 
         .header-flower {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            color: #d63031;
-            font-size: 2rem;
+            font-size: 2.8rem;
             margin-bottom: 5px;
-            font-family: 'Segoe UI', sans-serif;
         }
 
         .subtitle {
@@ -149,7 +145,7 @@
 
         .divider {
             height: 2px;
-            width: 70px;
+            width: 80px;
             background: linear-gradient(to right, #d63031, #e84393);
             margin: 0 auto 25px auto;
             border-radius: 2px;
@@ -167,16 +163,15 @@
         }
 
         .signature {
-            margin-top: 30px;
+            margin-top: 25px;
             text-align: right;
-            font-weight: bold;
-            font-size: 1.2rem;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
             color: #d63031;
-            font-style: italic;
         }
 
         .footer-note {
-            margin-top: 25px;
+            margin-top: 20px;
             font-size: 0.85rem;
             color: #888;
             font-family: sans-serif;
@@ -185,7 +180,7 @@
 </head>
 <body>
 
-    <!-- Floating Rose Petals & Flowers -->
+    <!-- Floating Rose Petals -->
     <div class="petal" style="left: 10%; animation-delay: 0s;">🌹</div>
     <div class="petal" style="left: 25%; animation-delay: 2s;">🌸</div>
     <div class="petal" style="left: 45%; animation-delay: 4s;">🌺</div>
@@ -194,24 +189,24 @@
 
     <div class="wrapper">
         
-        <!-- STEP 1: INITIAL BEAUTIFUL CARD -->
+        <!-- STEP 1: INITIAL CARD -->
         <div class="envelope-card" id="cardFront" onclick="openCard()">
             <div class="rose-icon">🌹</div>
-            <div class="envelope-title">For Shabab</div>
-            <div class="envelope-subtitle">A special birthday message is waiting inside...</div>
+            <div class="elegant-title">For Shabab</div>
+            <div class="envelope-subtitle">A special message is waiting inside...</div>
             <div class="tap-btn">Tap to Open Card 💌</div>
         </div>
 
         <!-- STEP 2: REVEALED LETTER -->
         <div class="letter-card" id="cardLetter">
             <div class="header-flower">🌹✨</div>
-            <h1>Happy Birthday, Shabab!</h1>
+            <h1 class="elegant-title">Happy Birthday, Shabab</h1>
             <p class="subtitle">To the most special girl in my world ✨</p>
             
             <div class="divider"></div>
 
             <div class="letter">
-                <p>Happy Birthday, my love!</p>
+                <p>My love,</p>
                 
                 <p>I wanted to make something special just for you because a standard message could never be enough to show how much you truly mean to me. Even though miles may keep us apart physically right now, you are in my thoughts every single day, and you hold the absolute biggest place in my heart.</p>
                 
@@ -222,13 +217,12 @@
                 <p>Enjoy your special day to the absolute fullest!</p>
 
                 <div class="signature">
-                    Forever yours ❤️
+                    Forever yours Mahir ❤️
                 </div>
             </div>
 
             <div class="footer-note">
-                Made with love, especially for you.🌹
-                Mahir🌹
+                Made with love, especially for you. 🌹
             </div>
         </div>
 
