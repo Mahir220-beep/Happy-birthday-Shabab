@@ -170,6 +170,26 @@
             color: #d63031;
         }
 
+        /* MUSIC PLAYER */
+        .music-container {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px dashed #ff7675;
+        }
+
+        .music-label {
+            font-size: 0.9rem;
+            color: #e84393;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        audio {
+            width: 100%;
+            border-radius: 20px;
+            outline: none;
+        }
+
         .footer-note {
             margin-top: 20px;
             font-size: 0.85rem;
@@ -217,8 +237,17 @@
                 <p>Enjoy your special day to the absolute fullest!</p>
 
                 <div class="signature">
-                    Forever yours Mahir ❤️
+                    Forever yours ❤️
                 </div>
+            </div>
+
+            <!-- MUSIC PLAYER -->
+            <div class="music-container">
+                <p class="music-label">🎵 Play our song while you read:</p>
+                <audio id="bgMusic" controls loop>
+                    <source src="Dhal%20Jaun%20Main%20by%20Arijit%20Singh%20_%20Rustom%20_%20Akshay%20Kumar%20%26%20Ileana%20_%20Jeet%20Gannguli%20%2C%20Manoj%20M%20[OBL4ggt6vX8].mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
 
             <div class="footer-note">
@@ -232,6 +261,13 @@
         function openCard() {
             document.getElementById('cardFront').style.display = 'none';
             document.getElementById('cardLetter').style.display = 'block';
+
+            var audio = document.getElementById('bgMusic');
+            if (audio) {
+                audio.play().catch(function(error) {
+                    console.log("Autoplay prevented, user can click play manually.");
+                });
+            }
         }
     </script>
 
