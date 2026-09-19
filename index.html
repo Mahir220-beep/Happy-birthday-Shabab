@@ -244,8 +244,8 @@
             <!-- MUSIC PLAYER -->
             <div class="music-container">
                 <p class="music-label">🎵 Play our song while you read:</p>
-                <audio id="bgMusic" controls loop>
-                    <source src="Dhal%20Jaun%20Main%20by%20Arijit%20Singh%20_%20Rustom%20_%20Akshay%20Kumar%20%26%20Ileana%20_%20Jeet%20Gannguli%20%2C%20Manoj%20M%20[OBL4ggt6vX8].mp3" type="audio/mpeg">
+                <audio id="bgMusic" controls loop preload="auto">
+                    <source src="Dhaljaunmain.mp3.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
@@ -265,7 +265,7 @@
             var audio = document.getElementById('bgMusic');
             if (audio) {
                 audio.play().catch(function(error) {
-                    console.log("Autoplay prevented, user can click play manually.");
+                    console.log("Autoplay prevented, tap play manually.");
                 });
             }
         }
