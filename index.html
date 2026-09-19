@@ -15,7 +15,8 @@
 
         body {
             font-family: 'Playfair Display', Georgia, serif;
-            background: #2d0b1e url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200') center/cover no-repeat fixed;
+            /* Snowy cozy town with warm yellow lights */
+            background: #1a1c29 url('https://images.unsplash.com/photo-1517299321609-52687d1bc55a?q=80&w=1200') center/cover no-repeat fixed;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -30,22 +31,24 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(45, 11, 30, 0.55);
+            background: rgba(15, 23, 42, 0.45);
             z-index: 1;
         }
 
-        /* Animated Floating Rose Petals */
-        .petal {
+        /* Animated Floating Snowflakes */
+        .snowflake {
             position: absolute;
-            font-size: 24px;
-            animation: fall 8s linear infinite;
+            font-size: 20px;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+            animation: fall 9s linear infinite;
             z-index: 2;
             pointer-events: none;
         }
 
         @keyframes fall {
-            0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0.9; }
+            100% { transform: translateY(105vh) rotate(360deg); opacity: 0.2; }
         }
 
         .wrapper {
@@ -56,21 +59,21 @@
             text-align: center;
         }
 
-        /* ENVELOPE CARD */
+        /* ENVELOPE CARD WITH WARM GLOW */
         .envelope-card {
             background: rgba(255, 255, 255, 0.95);
             padding: 40px 25px;
             border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.2);
             backdrop-filter: blur(10px);
-            border: 2px solid #e84393;
+            border: 2px solid #f39c12;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .envelope-card:hover {
             transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(232, 67, 147, 0.3);
+            box-shadow: 0 20px 40px rgba(243, 156, 18, 0.4);
         }
 
         .rose-icon {
@@ -97,7 +100,7 @@
         }
 
         .envelope-subtitle {
-            color: #777;
+            color: #666;
             font-size: 1.05rem;
             margin-bottom: 25px;
             font-style: italic;
@@ -105,7 +108,7 @@
 
         .tap-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #d63031, #e84393);
+            background: linear-gradient(135deg, #d63031, #f39c12);
             color: white;
             padding: 14px 30px;
             border-radius: 30px;
@@ -114,15 +117,15 @@
             box-shadow: 0 5px 15px rgba(214, 48, 49, 0.4);
         }
 
-        /* REVEALED LETTER */
+        /* REVEALED LETTER CARD */
         .letter-card {
             display: none;
             background: rgba(255, 255, 255, 0.96);
             padding: 35px 25px;
             border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 0, 0.25);
             backdrop-filter: blur(10px);
-            border: 2px solid #ff7675;
+            border: 2px solid #f39c12;
             animation: fadeIn 0.8s ease-in-out forwards;
         }
 
@@ -138,7 +141,7 @@
 
         .subtitle {
             font-size: 1.1rem;
-            color: #e84393;
+            color: #e67e22;
             font-style: italic;
             margin-bottom: 20px;
         }
@@ -146,7 +149,7 @@
         .divider {
             height: 2px;
             width: 80px;
-            background: linear-gradient(to right, #d63031, #e84393);
+            background: linear-gradient(to right, #d63031, #f39c12);
             margin: 0 auto 25px auto;
             border-radius: 2px;
         }
@@ -174,12 +177,12 @@
         .music-container {
             margin-top: 25px;
             padding-top: 15px;
-            border-top: 1px dashed #ff7675;
+            border-top: 1px dashed #f39c12;
         }
 
         .music-label {
             font-size: 0.9rem;
-            color: #e84393;
+            color: #e67e22;
             margin-bottom: 10px;
             font-style: italic;
         }
@@ -200,18 +203,18 @@
 </head>
 <body>
 
-    <!-- Floating Rose Petals -->
-    <div class="petal" style="left: 10%; animation-delay: 0s;">🌹</div>
-    <div class="petal" style="left: 25%; animation-delay: 2s;">🌸</div>
-    <div class="petal" style="left: 45%; animation-delay: 4s;">🌺</div>
-    <div class="petal" style="left: 65%; animation-delay: 1s;">🌹</div>
-    <div class="petal" style="left: 85%; animation-delay: 3s;">🌸</div>
+    <!-- Floating Snowflakes -->
+    <div class="snowflake" style="left: 8%; animation-delay: 0s;">❄️</div>
+    <div class="snowflake" style="left: 22%; animation-delay: 2.5s;">✨</div>
+    <div class="snowflake" style="left: 42%; animation-delay: 5s;">❄️</div>
+    <div class="snowflake" style="left: 62%; animation-delay: 1.2s;">🌨️</div>
+    <div class="snowflake" style="left: 82%; animation-delay: 3.8s;">❄️</div>
 
     <div class="wrapper">
         
         <!-- STEP 1: INITIAL CARD -->
         <div class="envelope-card" id="cardFront" onclick="openCard()">
-            <div class="rose-icon">🌹</div>
+            <div class="rose-icon">❄️💌</div>
             <div class="elegant-title">For Shabab</div>
             <div class="envelope-subtitle">A special message is waiting inside...</div>
             <div class="tap-btn">Tap to Open Card 💌</div>
@@ -219,22 +222,24 @@
 
         <!-- STEP 2: REVEALED LETTER -->
         <div class="letter-card" id="cardLetter">
-            <div class="header-flower">🌹✨</div>
+            <div class="header-flower">❄️✨</div>
             <h1 class="elegant-title">Happy Birthday, Shabab</h1>
             <p class="subtitle">To the most special girl in my world ✨</p>
             
             <div class="divider"></div>
 
             <div class="letter">
-                <p>My love,</p>
+                <p>My dearest Shabab,</p>
                 
-                <p>I wanted to make something special just for you because a standard message could never be enough to show how much you truly mean to me. Even though miles may keep us apart physically right now, you are in my thoughts every single day, and you hold the absolute biggest place in my heart.</p>
+                <p>Happy Birthday to the girl who completely brightens up my universe! I wanted to build this page for you because a simple text message could never express how much love, appreciation, and care I hold for you in my heart. You are truly my favorite person in the entire world.</p>
                 
-                <p>Thank you for being who you are—for your kindness, your warmth, and for bringing so much brightness into my life. Every conversation with you makes my day better, and I am so grateful for every single moment and memory we share together.</p>
+                <p>Even though distance keeps us apart right now, please know that not a single day goes by where you aren't on my mind. You make my life so much warmer, softer, and happier just by being in it. Your voice, your smile, and your beautiful soul mean everything to me, and I am endlessly grateful for every moment we share.</p>
                 
-                <p>I hope today brings you as much joy, smiles, and happiness as you bring into my life every day. You deserve all the wonderful things this world has to offer, and I cannot wait for the time when we can celebrate together in person.</p>
+                <p>Meri jaan, aap meri zindagi ka sab se khoobsurat hissa ho. Mujhe alfaz kam lagte hain jab bhi aapke liye apni feelings express karni hoti hain. Aapki smile, aapki baatein, aur aapka pyara sa wajood meri duniya ko roshan kar deta hai. Faaslay jitne bhi hon, mera dil hamesha aapke kareeb rehta hai.</p>
                 
-                <p>Enjoy your special day to the absolute fullest!</p>
+                <p>Aap meri life ki sab se bari blessing ho. Main hamesha Dua karta hoon ke aapki life khushiyon, sakoon aur kamyabiyon se bhar jaye. Aap har din utni hi special ho jitni aaj ke din ho, aur main hamesha aapke sath har pal celebrate karna chahta hoon. I can't wait for the day when we can celebrate together in person!</p>
+                
+                <p>May your special day bring you as much pure happiness and love as you bring into my life every single day. Enjoy every second of your birthday, my love!</p>
 
                 <div class="signature">
                     Forever yours ❤️
@@ -251,7 +256,7 @@
             </div>
 
             <div class="footer-note">
-                Made with love, especially for you. 🌹
+                Made with love, especially for you. ❄️✨
             </div>
         </div>
 
